@@ -2,7 +2,9 @@
 from common.get_keyword import GetKeyword
 import pymysql
 
-
+"""
+接口测试
+"""
 class OpDatabase(object):
    
     def __init__(self, host='ecshop.itsoso.cn', user='ecshop', password='ecshop', db='ecshop', port=3306, charset='utf8'):

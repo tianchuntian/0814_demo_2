@@ -5,7 +5,6 @@ from common.get_keyword import GetKeyword
 import unittest
 
 
-
 class TestOrder(unittest.TestCase):
     # 编写test fixture
     def setUp(self) -> None:
@@ -50,7 +49,6 @@ class TestOrder(unittest.TestCase):
         # 断言
         self.assertEqual(succeed, result, msg='断言失败')
 
-
     # 查询待发货订单
     def test_order_await_ship(self):
         # 读取订单信息表中未发货的订单数
@@ -68,7 +66,6 @@ class TestOrder(unittest.TestCase):
         result = True if len(order_list) == count else False  # 期望结果
         # 断言
         self.assertEqual(succeed, result, msg='断言失败')
-
 
     # 查询待收货订单
     def test_order_shipped(self):
@@ -88,7 +85,6 @@ class TestOrder(unittest.TestCase):
         # 断言
         self.assertEqual(succeed, result, msg='断言失败')
 
-
     # 查询已收货订单
     def test_order_finished(self):
         # 读取订单信息表中已收货的订单数
@@ -106,7 +102,6 @@ class TestOrder(unittest.TestCase):
         result = True if len(order_list) == count else False  # 期望结果
         # 断言
         self.assertEqual(succeed, result, msg='断言失败')
-
 
 
 if __name__ == '__main__':

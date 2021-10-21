@@ -1,6 +1,7 @@
 ﻿from common.send_method import SendMethod
 from interface.login import Login
 
+
 # 编写购物车类
 class Trolley(object):
     # 添加
@@ -36,4 +37,3 @@ if __name__ == '__main__':
     response = Trolley.trolley_add(url=add_url, data=add_data)
     # print(response)
     # 查询
-

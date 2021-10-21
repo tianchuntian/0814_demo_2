@@ -2,7 +2,9 @@
 from interface.login import Login
 from common.get_keyword import GetKeyword
 from common.op_database import OpDatabase
-
+"""
+接口测试
+"""
 class Addresss(object) :
     @staticmethod
     def view_address(url,data):

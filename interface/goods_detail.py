@@ -1,7 +1,9 @@
 ﻿from common.send_method import SendMethod
 from common.get_keyword import GetKeyword
 from interface.login import Login
-
+"""
+接口测试
+"""
 class GoodsDetail(object) :
     def __init__(self,url):
         self.url = url

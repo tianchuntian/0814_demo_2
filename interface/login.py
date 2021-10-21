@@ -1,6 +1,8 @@
 ﻿from common.send_method import SendMethod
 from common.get_keyword import GetKeyword
-
+"""
+接口测试
+"""
 class Login(object):
     """
     登录接口

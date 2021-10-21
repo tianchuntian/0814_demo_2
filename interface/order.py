@@ -1,6 +1,8 @@
 ﻿from common.send_method import SendMethod
 from interface.login import Login
-
+"""
+接口测试
+"""
 # 编写购物车类
 class Order(object):
     # 待付款

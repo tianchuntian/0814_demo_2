@@ -5,7 +5,6 @@ from common.op_database import OpDatabase
 import unittest
 
 
-
 class TestTrolley(unittest.TestCase):
     # 编写test fixture
     def setUp(self) -> None:
@@ -48,7 +47,7 @@ class TestTrolley(unittest.TestCase):
         succeed = GetKeyword.get_keyword(response, 'succeed')  # 实际结果
         # 获取商品添加后购物车表中用户所有的商品类数
         after_kinds = self.op_database.get_all(sql)
-        result = len(after_kinds) - len(before_kinds)   # 期望结果
+        result = len(after_kinds) - len(before_kinds)  # 期望结果
         # 断言
         self.assertEqual(succeed, result, msg='断言失败')
 

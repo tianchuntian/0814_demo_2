@@ -1,7 +1,9 @@
 ﻿import requests
 import json
 
-
+"""
+接口测试
+"""
 class SendMethod:
     @staticmethod
     def send_method(url,data):

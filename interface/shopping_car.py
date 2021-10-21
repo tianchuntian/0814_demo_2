@@ -2,35 +2,38 @@
 from common.get_keyword import GetKeyword
 from interface.login import Login
 
-class ShoppingCar(object) :
-    def __init__(self,url):
+
+class ShoppingCar(object):
+    def __init__(self, url):
         self.url = url
-    def add_shopping_car(self,data):
+
+    def add_shopping_car(self, data):
         """添加购物车"""
-        return SendMethod.send_method(self.url,data)
+        return SendMethod.send_method(self.url, data)
 
-    def view_shopping_car(self,data):
+    def view_shopping_car(self, data):
         """查看购物车"""
-        return SendMethod.send_method(self.url,data)
+        return SendMethod.send_method(self.url, data)
 
-    def modify_shopping_car(self,data):
+    def modify_shopping_car(self, data):
         """修改购物车"""
-        return SendMethod.send_method(self.url,data)
+        return SendMethod.send_method(self.url, data)
 
-    def delete_shopping_car(self,data):
+    def delete_shopping_car(self, data):
         """删除购物车"""
-        return SendMethod.send_method(self.url,data)
+        return SendMethod.send_method(self.url, data)
+
 
 if __name__ == '__main__':
     # 先登录,获取session
     url1 = "http://ecshop.itsoso.cn/ECMobile/?url=/user/signin"
     logins = Login(url1)
-    data = {"name": "grj123456", "password":"grj123456"}
+    data = {"name": "grj123456", "password": "grj123456"}
     session = logins.get_session(data)
     # # 添加购物车
     url = "http://ecshop.itsoso.cn/ECMobile/?url=/cart/create"
     login = ShoppingCar(url)
-    data = {"spec":[],"session":session,"goods_id":89,"number":1}
+    data = {"spec": [], "session": session, "goods_id": 89, "number": 1}
     print(login.add_shopping_car(data))
     # 查看购物车(此处添加后却查看不到,BUG)
     # url = "http://ecshop.itsoso.cn/ECMobile/?url=/cart/list"

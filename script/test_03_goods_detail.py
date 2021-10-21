@@ -4,11 +4,11 @@ from common.get_keyword import GetKeyword
 import unittest
 
 
-
 class Test_goods_detail(unittest.TestCase):
     """
     验证商品详情接口
     """
+
     def setUp(self) -> None:
         # 登录数据
         login_url = 'http://ecshop.itsoso.cn/ECMobile/?url=/user/signin'
@@ -16,7 +16,6 @@ class Test_goods_detail(unittest.TestCase):
         # 实例化登录对象
         login = Login(url=login_url)
         self.session = login.get_session(login_data)
-
 
     def test_goods_detail(self):
         data = {"goods_id": 89, "session": self.session}
@@ -26,7 +25,6 @@ class Test_goods_detail(unittest.TestCase):
         goods_id = GetKeyword.get_keyword(response, 'id')
         result = True if goods_id == '89' else False
         self.assertEqual(succeed, result)
-
 
 
 if __name__ == '__main__':
